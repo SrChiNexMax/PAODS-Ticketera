@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdsTk.Aplicacion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02693fe1935f9183da0f844c7daac3969f15008a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c67bf31c92a7719f7285a139c888678a28a27358")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdsTk.Aplicacion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdsTk.Aplicacion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

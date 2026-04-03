@@ -22,7 +22,7 @@ public class Usuario
 
     public ICollection<Incidente> IncidentesSolicitados { get; set; } = new List<Incidente>();
 
-    public ICollection<RegistroAuditoria> RegistroAuditoria { get; set; } = new List<RegistroAuditoria>();
+    public ICollection<RegistroAuditoria> RegistrosAuditoria { get; set; } = new List<RegistroAuditoria>();
 
     public ICollection<ComentarioIncidente> Comentarios { get; set; } = new List<ComentarioIncidente>();
 

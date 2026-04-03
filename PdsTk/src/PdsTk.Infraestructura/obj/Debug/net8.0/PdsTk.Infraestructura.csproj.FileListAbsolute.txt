@@ -1,4 +1,5 @@
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\bin\Debug\net8.0\PdsTk.Infraestructura.deps.json
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\bin\Debug\net8.0\PdsTk.Infraestructura.runtimeconfig.json
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\bin\Debug\net8.0\PdsTk.Infraestructura.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\bin\Debug\net8.0\PdsTk.Infraestructura.pdb
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\bin\Debug\net8.0\PdsTk.Aplicacion.dll
@@ -15,4 +16,5 @@ C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\obj\Debug\net8.0\PdsTk.Infraestructura.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\obj\Debug\net8.0\refint\PdsTk.Infraestructura.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\obj\Debug\net8.0\PdsTk.Infraestructura.pdb
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\obj\Debug\net8.0\PdsTk.Infraestructura.genruntimeconfig.cache
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Infraestructura\obj\Debug\net8.0\ref\PdsTk.Infraestructura.dll
