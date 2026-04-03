@@ -1,0 +1,11 @@
+bin/
+obj/
+.vscode/
+.git/
+.gitignore
+**/bin/
+**/obj/
+**/.vs/
+**/TestResults/
+README.md
+frontend/node_modules/

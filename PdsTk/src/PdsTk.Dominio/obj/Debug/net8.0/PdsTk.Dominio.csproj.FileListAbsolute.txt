@@ -1,0 +1,12 @@
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\bin\Debug\net8.0\PdsTk.Dominio.deps.json
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\bin\Debug\net8.0\PdsTk.Dominio.dll
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\bin\Debug\net8.0\PdsTk.Dominio.pdb
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.AssemblyInfoInputs.cache
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.AssemblyInfo.cs
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.sourcelink.json
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.dll
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\refint\PdsTk.Dominio.dll
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\PdsTk.Dominio.pdb
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Dominio\obj\Debug\net8.0\ref\PdsTk.Dominio.dll

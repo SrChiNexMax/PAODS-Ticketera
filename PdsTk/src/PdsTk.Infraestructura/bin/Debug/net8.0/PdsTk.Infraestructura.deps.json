@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PdsTk.Infraestructura/1.0.0": {
+        "dependencies": {
+          "PdsTk.Aplicacion": "1.0.0",
+          "PdsTk.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "PdsTk.Infraestructura.dll": {}
+        }
+      },
+      "PdsTk.Aplicacion/1.0.0": {
+        "dependencies": {
+          "PdsTk.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "PdsTk.Aplicacion.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PdsTk.Dominio/1.0.0": {
+        "runtime": {
+          "PdsTk.Dominio.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PdsTk.Infraestructura/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PdsTk.Aplicacion/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PdsTk.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
