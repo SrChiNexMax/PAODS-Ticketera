@@ -1,5 +1,0 @@
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\PdsTk.Infrastructure\obj\Debug\net8.0\PdsTk.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\PdsTk.Infrastructure\obj\Debug\net8.0\PdsTk.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\PdsTk.Infrastructure\obj\Debug\net8.0\PdsTk.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\PdsTk.Infrastructure\obj\Debug\net8.0\PdsTk.Infrastructure.AssemblyInfo.cs
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\PdsTk.Infrastructure\obj\Debug\net8.0\PdsTk.Infrastructure.csproj.CoreCompileInputs.cache
