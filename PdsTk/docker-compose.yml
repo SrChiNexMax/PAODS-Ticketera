@@ -1,0 +1,15 @@
+services:
+  pdstk-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: pdstk-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "TuPassword123!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - pdstk_sqlserver_data:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  pdstk_sqlserver_data:
