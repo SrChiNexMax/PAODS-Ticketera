@@ -2,13 +2,19 @@ services:
   pdstk-db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: pdstk-db
+    user: root # Necesario para ajustar permisos de los certificados al arrancar
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: "TuPassword123!"
+      # Configuración de Certificado
+      MSSQL_TLS_CERT: /var/opt/mssql/certs/mssql.pem
+      MSSQL_TLS_KEY: /var/opt/mssql/certs/mssql.key
     ports:
       - "1433:1433"
     volumes:
       - pdstk_sqlserver_data:/var/opt/mssql
+      # Mapea la carpeta local donde tienes tus certificados reales
+      - ./certs:/var/opt/mssql/certs 
     restart: unless-stopped
 
 volumes:
