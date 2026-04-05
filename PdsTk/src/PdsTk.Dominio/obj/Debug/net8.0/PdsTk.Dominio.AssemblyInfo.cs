@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdsTk.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae149bc433ffd788eb671eddddfd4652fc42c395")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5741a39d04c00490f0feb05e6a84ad09347ee391")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdsTk.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdsTk.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

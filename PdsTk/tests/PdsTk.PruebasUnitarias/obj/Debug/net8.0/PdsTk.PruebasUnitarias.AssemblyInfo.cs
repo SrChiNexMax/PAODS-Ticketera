@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdsTk.PruebasUnitarias")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c67bf31c92a7719f7285a139c888678a28a27358")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5741a39d04c00490f0feb05e6a84ad09347ee391")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdsTk.PruebasUnitarias")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdsTk.PruebasUnitarias")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

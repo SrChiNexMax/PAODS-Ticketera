@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using PdsTk.Infraestructura.Persistencia;
+using PdsTk.Infraestructura.Persistencia.Inicializadores;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Servicios
+// Configuración de servicios
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -13,13 +14,19 @@ builder.Services.AddDbContext<PdsTkDbContext>(options =>
 
 var app = builder.Build();
 
-// Pipeline HTTP
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<PdsTkDbContext>();
+    await DbInicializador.InicializarAsync(dbContext);
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+//app.UseAuthorization();
 app.UseHttpsRedirection();
 
 app.MapControllers();
