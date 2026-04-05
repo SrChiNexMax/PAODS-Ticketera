@@ -106,8 +106,8 @@ public static class DbInicializador
                 Nombre = "SLA Baja",
                 Descripcion = "Incidentes de baja prioridad con tiempos de respuesta y resolución más largos",
                 Prioridad = PrioridadIncidente.Baja,
-                TiempoPrimeraRespuestaMinutos = TimeSpan.FromMinutes(240),
-                TiempoResolucionMinutos = TimeSpan.FromMinutes(1440),
+                TiempoPrimeraRespuestaMinutos = 240,
+                TiempoResolucionMinutos = 1440,
                 Activo = true,
                 FechaCreacion = DateTime.UtcNow
             },
@@ -116,8 +116,8 @@ public static class DbInicializador
                 Nombre = "SLA Media",
                 Descripcion = "Incidentes de prioridad media con tiempos de respuesta y resolución moderados",
                 Prioridad = PrioridadIncidente.Media,
-                TiempoPrimeraRespuestaMinutos = TimeSpan.FromMinutes(120),
-                TiempoResolucionMinutos = TimeSpan.FromMinutes(480),
+                TiempoPrimeraRespuestaMinutos = 120,
+                TiempoResolucionMinutos = 480,
                 Activo = true,
                 FechaCreacion = DateTime.UtcNow
             },
@@ -126,8 +126,8 @@ public static class DbInicializador
                 Nombre = "SLA Alta",
                 Descripcion = "Incidentes de alta prioridad con tiempos de respuesta y resolución rápidos",
                 Prioridad = PrioridadIncidente.Alta,
-                TiempoPrimeraRespuestaMinutos = TimeSpan.FromMinutes(60),
-                TiempoResolucionMinutos = TimeSpan.FromMinutes(240),
+                TiempoPrimeraRespuestaMinutos = 60,
+                TiempoResolucionMinutos = 240,
                 Activo = true,
                 FechaCreacion = DateTime.UtcNow
             },
@@ -136,8 +136,8 @@ public static class DbInicializador
                 Nombre = "SLA Crítica",
                 Descripcion = "Incidentes críticos con tiempos de respuesta y resolución muy rápidos",
                 Prioridad = PrioridadIncidente.Critica,
-                TiempoPrimeraRespuestaMinutos = TimeSpan.FromMinutes(15),
-                TiempoResolucionMinutos = TimeSpan.FromMinutes(60),
+                TiempoPrimeraRespuestaMinutos = 15,
+                TiempoResolucionMinutos = 60,
                 Activo = true,
                 FechaCreacion = DateTime.UtcNow
             }

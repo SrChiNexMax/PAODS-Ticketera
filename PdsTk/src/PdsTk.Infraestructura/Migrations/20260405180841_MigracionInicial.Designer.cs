@@ -12,8 +12,8 @@ using PdsTk.Infraestructura.Persistencia;
 namespace PdsTk.Infraestructura.Migrations
 {
     [DbContext(typeof(PdsTkDbContext))]
-    [Migration("20260405003747_SeedInicialRolesUsuariosSla")]
-    partial class SeedInicialRolesUsuariosSla
+    [Migration("20260405180841_MigracionInicial")]
+    partial class MigracionInicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -166,11 +166,11 @@ namespace PdsTk.Infraestructura.Migrations
                     b.Property<int>("Prioridad")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("TiempoPrimeraRespuestaMinutos")
-                        .HasColumnType("time");
+                    b.Property<int>("TiempoPrimeraRespuestaMinutos")
+                        .HasColumnType("int");
 
-                    b.Property<TimeSpan>("TiempoResolucionMinutos")
-                        .HasColumnType("time");
+                    b.Property<int>("TiempoResolucionMinutos")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

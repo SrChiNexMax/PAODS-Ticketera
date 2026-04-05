@@ -24,11 +24,13 @@ public class PoliticaSLAConfiguracion : IEntityTypeConfiguration<PoliticaSLA>
             .IsRequired();
 
         builder.Property(x => x.TiempoPrimeraRespuestaMinutos)
+            .HasColumnType("int")
             .IsRequired();
 
         builder.Property(x => x.TiempoResolucionMinutos)
+            .HasColumnType("int")
             .IsRequired();
-
+            
         builder.Property(x => x.Activo)
             .IsRequired();
 

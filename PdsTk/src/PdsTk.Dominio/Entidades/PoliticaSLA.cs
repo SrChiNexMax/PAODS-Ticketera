@@ -12,9 +12,9 @@ public class PoliticaSLA
 
     public PrioridadIncidente Prioridad { get; set; }
 
-    public TimeSpan TiempoPrimeraRespuestaMinutos { get; set; }
+    public int TiempoPrimeraRespuestaMinutos { get; set; }
 
-    public TimeSpan TiempoResolucionMinutos { get; set; }
+    public int TiempoResolucionMinutos { get; set; }
 
     public bool Activo { get; set; } = true;
 

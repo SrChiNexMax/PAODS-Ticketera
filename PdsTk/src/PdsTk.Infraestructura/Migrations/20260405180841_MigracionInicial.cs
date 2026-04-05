@@ -20,8 +20,8 @@ namespace PdsTk.Infraestructura.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Prioridad = table.Column<int>(type: "int", nullable: false),
-                    TiempoPrimeraRespuestaMinutos = table.Column<TimeSpan>(type: "time", nullable: false),
-                    TiempoResolucionMinutos = table.Column<TimeSpan>(type: "time", nullable: false),
+                    TiempoPrimeraRespuestaMinutos = table.Column<int>(type: "int", nullable: false),
+                    TiempoResolucionMinutos = table.Column<int>(type: "int", nullable: false),
                     Activo = table.Column<bool>(type: "bit", nullable: false),
                     FechaCreacion = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
