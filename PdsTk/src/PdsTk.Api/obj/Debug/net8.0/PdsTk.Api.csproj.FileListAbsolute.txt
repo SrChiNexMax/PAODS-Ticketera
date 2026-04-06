@@ -8,6 +8,7 @@ C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\ne
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Humanizer.dll
+C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll

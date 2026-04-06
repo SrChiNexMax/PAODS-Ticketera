@@ -1,4 +1,4 @@
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\bin\Debug\net8.0\PdsTk.Aplicacion.deps.json
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\bin\Debug\net8.0\PdsTk.Aplicacion.deps.json
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\bin\Debug\net8.0\PdsTk.Aplicacion.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\bin\Debug\net8.0\PdsTk.Aplicacion.pdb
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\bin\Debug\net8.0\PdsTk.Dominio.dll
@@ -9,8 +9,8 @@ C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\D
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Aplicacion.AssemblyInfo.cs
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Aplicacion.csproj.CoreCompileInputs.cache
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Aplicacion.sourcelink.json
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Ap.B9A0E374.Up2Date
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Ap.B9A0E374.Up2Date
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Aplicacion.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\refint\PdsTk.Aplicacion.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\PdsTk.Aplicacion.pdb
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\ref\PdsTk.Aplicacion.dll
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\src\PdsTk.Aplicacion\obj\Debug\net8.0\ref\PdsTk.Aplicacion.dll

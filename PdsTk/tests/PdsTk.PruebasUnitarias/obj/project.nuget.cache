@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "18/RtvDaI20=",
+  "dgSpecHash": "d0y/s6PnVc4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\PdsTk.PruebasUnitarias.csproj",
+  "projectFilePath": "C:\\Users\\aram2\\Documents\\Github\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\PdsTk.PruebasUnitarias.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aram2\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\aram2\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

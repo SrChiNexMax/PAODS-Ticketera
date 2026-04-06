@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PdsTk.PruebasUnitarias
-build_property.ProjectDir = C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\
+build_property.ProjectDir = C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

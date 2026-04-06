@@ -12,4 +12,10 @@ public static class PasswordHelper
         var hashBytes = sha256.ComputeHash(bytes);
         return Convert.ToHexString(hashBytes);
     }
+
+    public static bool VerificarHash(string textoPlano, string hashExistente)
+    {
+        var hashGenerado = GenerarHash(textoPlano);
+        return string.Equals(hashGenerado, hashExistente, StringComparison.OrdinalIgnoreCase);
+    }
 }

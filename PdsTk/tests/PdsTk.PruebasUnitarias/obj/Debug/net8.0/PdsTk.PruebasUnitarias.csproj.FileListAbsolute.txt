@@ -4,8 +4,8 @@ C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitari
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\PdsTk.PruebasUnitarias.deps.json
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\PdsTk.PruebasUnitarias.runtimeconfig.json
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\PdsTk.PruebasUnitarias.deps.json
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\PdsTk.PruebasUnitarias.runtimeconfig.json
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\PdsTk.PruebasUnitarias.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\PdsTk.PruebasUnitarias.pdb
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
@@ -97,9 +97,9 @@ C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitari
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.AssemblyInfo.cs
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.csproj.CoreCompileInputs.cache
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.sourcelink.json
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.Pr.A0B97A0D.Up2Date
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.Pr.A0B97A0D.Up2Date
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\refint\PdsTk.PruebasUnitarias.dll
 C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.pdb
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.genruntimeconfig.cache
-C:\Users\aram2\Documents\GitHub\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\ref\PdsTk.PruebasUnitarias.dll
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\PdsTk.PruebasUnitarias.genruntimeconfig.cache
+C:\Users\aram2\Documents\Github\PAODS-Ticketera\PdsTk\tests\PdsTk.PruebasUnitarias\obj\Debug\net8.0\ref\PdsTk.PruebasUnitarias.dll

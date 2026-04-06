@@ -5549,11 +5549,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\PdsTk.PruebasUnitarias.csproj",
+      "projectUniqueName": "C:\\Users\\aram2\\Documents\\Github\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\PdsTk.PruebasUnitarias.csproj",
       "projectName": "PdsTk.PruebasUnitarias",
-      "projectPath": "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\PdsTk.PruebasUnitarias.csproj",
+      "projectPath": "C:\\Users\\aram2\\Documents\\Github\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\PdsTk.PruebasUnitarias.csproj",
       "packagesPath": "C:\\Users\\aram2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\obj\\",
+      "outputPath": "C:\\Users\\aram2\\Documents\\Github\\PAODS-Ticketera\\PdsTk\\tests\\PdsTk.PruebasUnitarias\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5574,8 +5574,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\src\\PdsTk.Aplicacion\\PdsTk.Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\src\\PdsTk.Aplicacion\\PdsTk.Aplicacion.csproj"
+            "C:\\Users\\aram2\\Documents\\Github\\PAODS-Ticketera\\PdsTk\\src\\PdsTk.Aplicacion\\PdsTk.Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\aram2\\Documents\\Github\\PAODS-Ticketera\\PdsTk\\src\\PdsTk.Aplicacion\\PdsTk.Aplicacion.csproj"
             },
             "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\src\\PdsTk.Dominio\\PdsTk.Dominio.csproj": {
               "projectPath": "C:\\Users\\aram2\\Documents\\GitHub\\PAODS-Ticketera\\PdsTk\\src\\PdsTk.Dominio\\PdsTk.Dominio.csproj"
