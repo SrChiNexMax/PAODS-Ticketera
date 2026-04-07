@@ -26,6 +26,8 @@ public class CrearIncidenteCasoUso(
 
     public async Task<IncidenteDetalleDto> EjecutarAsync(CrearIncidenteSolicitud solicitud, CancellationToken cancellationToken = default)
     {
+        IncidenteCasoUsoHelper.ValidarPuedeCrearIncidente(solicitud.RolActual);
+
         if (string.IsNullOrWhiteSpace(solicitud.Titulo) || string.IsNullOrWhiteSpace(solicitud.Descripcion))
         {
             throw new InvalidOperationException("El titulo y la descripcion son obligatorios.");
@@ -94,6 +96,14 @@ public class ListarIncidentesCasoUso(IIncidenteRepository incidenteRepository)
                 AgenteAsignadoId = null
             };
         }
+        else if (IncidenteCasoUsoHelper.EsAgente(solicitud.RolActual))
+        {
+            filtro = filtro with
+            {
+                AgenteAsignadoId = solicitud.UsuarioActualId,
+                SolicitanteId = null
+            };
+        }
 
         var incidentes = await _incidenteRepository.ListarAsync(filtro, cancellationToken);
 
@@ -134,7 +144,7 @@ public class AsignarIncidenteCasoUso(
 
     public async Task<IncidenteDetalleDto> EjecutarAsync(AsignarIncidenteSolicitud solicitud, CancellationToken cancellationToken = default)
     {
-        IncidenteCasoUsoHelper.ValidarEsSoporte(solicitud.RolActual);
+        IncidenteCasoUsoHelper.ValidarPuedeAsignar(solicitud.RolActual);
 
         var incidente = await _incidenteRepository.ObtenerPorIdAsync(solicitud.IncidenteId, cancellationToken)
             ?? throw new InvalidOperationException("No se encontro el incidente.");
@@ -146,9 +156,9 @@ public class AsignarIncidenteCasoUso(
 
         IncidenteCasoUsoHelper.ValidarUsuarioActivo(agente);
 
-        if (!IncidenteCasoUsoHelper.EsSupervisor(agente.Rol?.Nombre))
+        if (!IncidenteCasoUsoHelper.EsAgente(agente.Rol?.Nombre))
         {
-            throw new InvalidOperationException("El usuario asignado debe tener rol Supervisor.");
+            throw new InvalidOperationException("El usuario asignado debe tener rol Agente.");
         }
 
         var accion = incidente.AgenteAsignadoId.HasValue
@@ -200,7 +210,7 @@ public class CambiarEstadoIncidenteCasoUso(
 
     public async Task<IncidenteDetalleDto> EjecutarAsync(CambiarEstadoIncidenteSolicitud solicitud, CancellationToken cancellationToken = default)
     {
-        IncidenteCasoUsoHelper.ValidarEsSoporte(solicitud.RolActual);
+        IncidenteCasoUsoHelper.ValidarPuedeCambiarEstado(solicitud.RolActual);
 
         var incidente = await _incidenteRepository.ObtenerPorIdAsync(solicitud.IncidenteId, cancellationToken)
             ?? throw new InvalidOperationException("No se encontro el incidente.");
@@ -272,7 +282,7 @@ public class AgregarComentarioIncidenteCasoUso(
             FechaCreacion = fechaComentario
         };
 
-        if (!solicitud.EsInterno && IncidenteCasoUsoHelper.EsSoporte(solicitud.RolActual))
+        if (!solicitud.EsInterno && IncidenteCasoUsoHelper.PuedeMarcarPrimeraRespuesta(incidente, solicitud.UsuarioActualId, solicitud.RolActual))
         {
             _slaService.RegistrarPrimeraRespuestaSiCorresponde(incidente, fechaComentario);
         }
@@ -314,12 +324,11 @@ public class ResolverIncidenteCasoUso(
 
     public async Task<IncidenteDetalleDto> EjecutarAsync(ResolverIncidenteSolicitud solicitud, CancellationToken cancellationToken = default)
     {
-        IncidenteCasoUsoHelper.ValidarEsSoporte(solicitud.RolActual);
-
         var incidente = await _incidenteRepository.ObtenerPorIdAsync(solicitud.IncidenteId, cancellationToken)
             ?? throw new InvalidOperationException("No se encontro el incidente.");
 
         IncidenteCasoUsoHelper.ValidarIncidenteOperable(incidente);
+        IncidenteCasoUsoHelper.ValidarPuedeResolver(incidente, solicitud.UsuarioActualId, solicitud.RolActual);
 
         var fechaResolucion = DateTime.UtcNow;
         var estadoAnterior = incidente.Estado;
@@ -407,10 +416,15 @@ internal static class IncidenteCasoUsoHelper
     public static bool EsSupervisor(string? rol) =>
         string.Equals(rol, RolesSistema.Supervisor, StringComparison.OrdinalIgnoreCase);
 
+    public static bool EsAgente(string? rol) =>
+        string.Equals(rol, RolesSistema.Agente, StringComparison.OrdinalIgnoreCase);
+
     public static bool EsSolicitante(string? rol) =>
         string.Equals(rol, RolesSistema.Solicitante, StringComparison.OrdinalIgnoreCase);
 
-    public static bool EsSoporte(string? rol) => EsAdministrador(rol) || EsSupervisor(rol);
+    public static bool EsSupervisorOAdministrador(string? rol) => EsAdministrador(rol) || EsSupervisor(rol);
+
+    public static bool EsSoporte(string? rol) => EsSupervisorOAdministrador(rol) || EsAgente(rol);
 
     public static void ValidarUsuarioActivo(Usuario usuario)
     {
@@ -420,22 +434,43 @@ internal static class IncidenteCasoUsoHelper
         }
     }
 
-    public static void ValidarEsSoporte(string rolActual)
+    public static void ValidarPuedeAsignar(string rolActual)
     {
-        if (!EsSoporte(rolActual))
+        if (!EsSupervisorOAdministrador(rolActual))
         {
             throw new UnauthorizedAccessException("No tienes permisos para ejecutar esta accion.");
         }
     }
 
+    public static void ValidarPuedeCrearIncidente(string rolActual)
+    {
+        if (!EsSolicitante(rolActual))
+        {
+            throw new UnauthorizedAccessException("Solo un solicitante puede crear incidentes.");
+        }
+    }
+
+    public static void ValidarPuedeCambiarEstado(string rolActual)
+    {
+        if (!EsSupervisorOAdministrador(rolActual))
+        {
+            throw new UnauthorizedAccessException("No tienes permisos para cambiar el estado del incidente.");
+        }
+    }
+
     public static bool PuedeVerIncidente(Incidente incidente, int usuarioActualId, string rolActual)
     {
-        if (EsSoporte(rolActual))
+        if (EsSupervisorOAdministrador(rolActual))
         {
             return true;
         }
 
-        return incidente.SolicitanteId == usuarioActualId;
+        if (EsAgente(rolActual))
+        {
+            return incidente.AgenteAsignadoId == usuarioActualId;
+        }
+
+        return EsSolicitante(rolActual) && incidente.SolicitanteId == usuarioActualId;
     }
 
     public static void ValidarIncidenteOperable(Incidente incidente)
@@ -463,7 +498,7 @@ internal static class IncidenteCasoUsoHelper
     {
         if (esInterno)
         {
-            if (!EsSoporte(rolActual))
+            if (!PuedeAtenderIncidente(incidente, usuarioActualId, rolActual))
             {
                 throw new UnauthorizedAccessException("Solo soporte puede crear comentarios internos.");
             }
@@ -471,20 +506,35 @@ internal static class IncidenteCasoUsoHelper
             return;
         }
 
-        if (EsSoporte(rolActual))
+        if (PuedeAtenderIncidente(incidente, usuarioActualId, rolActual))
         {
             return;
         }
 
-        if (incidente.SolicitanteId != usuarioActualId)
+        if (!EsSolicitante(rolActual) || incidente.SolicitanteId != usuarioActualId)
         {
             throw new UnauthorizedAccessException("No tienes permisos para comentar este incidente.");
         }
     }
 
+    public static bool PuedeMarcarPrimeraRespuesta(Incidente incidente, int usuarioActualId, string rolActual)
+    {
+        return PuedeAtenderIncidente(incidente, usuarioActualId, rolActual);
+    }
+
+    public static void ValidarPuedeResolver(Incidente incidente, int usuarioActualId, string rolActual)
+    {
+        if (PuedeAtenderIncidente(incidente, usuarioActualId, rolActual))
+        {
+            return;
+        }
+
+        throw new UnauthorizedAccessException("No tienes permisos para resolver este incidente.");
+    }
+
     public static void ValidarPuedeCerrar(Incidente incidente, int usuarioActualId, string rolActual)
     {
-        if (EsSoporte(rolActual))
+        if (EsSupervisorOAdministrador(rolActual))
         {
             return;
         }
@@ -495,6 +545,16 @@ internal static class IncidenteCasoUsoHelper
         }
 
         throw new UnauthorizedAccessException("No tienes permisos para cerrar este incidente.");
+    }
+
+    public static bool PuedeAtenderIncidente(Incidente incidente, int usuarioActualId, string rolActual)
+    {
+        if (EsSupervisorOAdministrador(rolActual))
+        {
+            return true;
+        }
+
+        return EsAgente(rolActual) && incidente.AgenteAsignadoId == usuarioActualId;
     }
 
     public static async Task<IncidenteDetalleDto> ObtenerDetalleAutorizadoAsync(
@@ -579,11 +639,11 @@ internal static class IncidenteCasoUsoHelper
 
         var puedeAgregarComentarioPublico = incidente.Estado is not EstadoIncidente.Cerrado
             && incidente.Estado is not EstadoIncidente.Cancelado
-            && (EsSoporte(rolActual) || incidente.SolicitanteId == usuarioActualId);
+            && (PuedeAtenderIncidente(incidente, usuarioActualId, rolActual) || incidente.SolicitanteId == usuarioActualId);
 
         var puedeAgregarComentarioInterno = incidente.Estado is not EstadoIncidente.Cerrado
             && incidente.Estado is not EstadoIncidente.Cancelado
-            && EsSoporte(rolActual);
+            && PuedeAtenderIncidente(incidente, usuarioActualId, rolActual);
 
         return new IncidenteDetalleDto(
             incidente.Id,

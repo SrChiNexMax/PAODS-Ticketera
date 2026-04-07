@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdsTk.Infraestructura")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75224af0d64caedd3776b6f9c76631fc97a9e61a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cebb11c4cb5020ea103d4366278b12b8df569474")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdsTk.Infraestructura")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdsTk.Infraestructura")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

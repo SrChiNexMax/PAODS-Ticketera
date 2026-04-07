@@ -10,14 +10,14 @@ public class ListarAgentesCasoUso(IUsuarioRepository usuarioRepository)
 
     public async Task<IReadOnlyCollection<UsuarioResumenDto>> EjecutarAsync(CancellationToken cancellationToken = default)
     {
-        var usuarios = await _usuarioRepository.ListarPorRolAsync(RolesSistema.Supervisor, cancellationToken);
+        var usuarios = await _usuarioRepository.ListarPorRolAsync(RolesSistema.Agente, cancellationToken);
 
         return usuarios
             .Select(x => new UsuarioResumenDto(
                 x.Id,
                 x.Nombre,
                 x.Correo,
-                x.Rol?.Nombre ?? RolesSistema.Supervisor))
+                x.Rol?.Nombre ?? RolesSistema.Agente))
             .ToArray();
     }
 }

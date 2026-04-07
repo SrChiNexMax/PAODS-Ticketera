@@ -1,8 +1,10 @@
 using System.Text;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PdsTk.Api.Middleware;
 using PdsTk.Aplicacion.Abstracciones.Persistencia;
 using PdsTk.Aplicacion.Abstracciones.Seguridad;
 using PdsTk.Aplicacion.CasosDeUso.Autenticacion;
@@ -44,7 +46,11 @@ if (corsOrigins.Length == 0)
     ];
 }
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -153,6 +159,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ApiExceptionMiddleware>();
 app.UseCors("Frontend");
 app.UseAuthentication();
 app.UseAuthorization();

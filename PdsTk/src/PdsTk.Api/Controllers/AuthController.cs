@@ -1,6 +1,6 @@
-using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PdsTk.Api.Extensions;
 using PdsTk.Aplicacion.CasosDeUso.Autenticacion;
 using PdsTk.Aplicacion.Dtos;
 
@@ -19,38 +19,15 @@ public class AuthController(
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] IniciarSesionSolicitud solicitud, CancellationToken cancellationToken)
     {
-        try
-        {
-            var respuesta = await _iniciarSesionCasoUso.EjecutarAsync(solicitud, cancellationToken);
-            return Ok(respuesta);
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            return Unauthorized(new { mensaje = ex.Message });
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(new { mensaje = ex.Message });
-        }
+        var respuesta = await _iniciarSesionCasoUso.EjecutarAsync(solicitud, cancellationToken);
+        return Ok(respuesta);
     }
 
     [Authorize]
     [HttpGet("me")]
     public async Task<IActionResult> PerfilActual(CancellationToken cancellationToken)
     {
-        if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var usuarioId))
-        {
-            return Unauthorized(new { mensaje = "Token invalido." });
-        }
-
-        try
-        {
-            var perfil = await _obtenerPerfilActualCasoUso.EjecutarAsync(usuarioId, cancellationToken);
-            return Ok(perfil);
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            return Unauthorized(new { mensaje = ex.Message });
-        }
+        var perfil = await _obtenerPerfilActualCasoUso.EjecutarAsync(User.ObtenerUsuarioId(), cancellationToken);
+        return Ok(perfil);
     }
 }
